@@ -24,7 +24,8 @@
             </tr>
             <!-- Aparece una nueva linea debajo del correo para poder responder a el -->
             <tr *ngIf="correo.responder">
-                <app-nuevo-correo [correo]="correo"></app-nuevo-correo>
+                <!-- accion realizada devuelve el valor si cancela o no -->
+                <app-nuevo-correo [correo]="correo" (accionRealizada)="accionRespuestaRapida(correo)"></app-nuevo-correo>
             </tr>
         </ng-container>
     </tbody>
